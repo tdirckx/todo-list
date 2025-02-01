@@ -1,9 +1,8 @@
 mod todo;
 
-use todo::todo_list::TodoList;
+use todo::todo_service::TodoService;
 
 fn main() {
-    let mut list = TodoList::new();
-    list.add(1, String::from("Gi"));
-    list.display();
+    let mut service = TodoService::new();
+    service.start_service();
 }

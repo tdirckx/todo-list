@@ -10,13 +10,15 @@ impl TodoItem {
         TodoItem {
             id,
             description,
-            completed: true
+            completed: false
         }
+    }
+
+    pub fn set_status(&mut self, completed: bool) {
+        self.completed = completed;
     }
 
     pub fn display(&self) {
         println!("Id: {}, Description: {}, Completed: {}", self.id, self.description, self.completed);
     }
-
-
 }
